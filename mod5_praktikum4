@@ -24,7 +24,7 @@ void initSerial (int baudrate){
 ISR(USART_RX_vect){
   char data = UDR0;
   if(data=='\n'){
-    lcd.clear(1);
+    lcd.clear();
     lcd.setCursor(0,0);
     lcd.print("incoming data");
     lcd.setCursor(0,1);
@@ -45,6 +45,6 @@ void setup(){
   sei();
   
 }
-void setup(){
+void loop(){
 }
 
